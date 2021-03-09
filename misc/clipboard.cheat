@@ -1,5 +1,5 @@
 % clipboard
 
 # Put a file's contents into your clipboard
-cat <file.txt> | xclip -sel clip
+cat <file> | xclip -sel clip
 

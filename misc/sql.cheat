@@ -1,14 +1,14 @@
 # Import a MySQL database from file
-mysql -u <user> -p<password> <database_name> < <input.sql>
+mysql -u <user> -p<password> <database_name> < input.sql
 
 # Dump a MySQL database to file
-mysqldump -h <localhost> -u <user> -p<password> <database> > <output.sql>
+mysqldump -h <localhost> -u <user> -p<password> <database> > output.sql
 
 # Export just a single table with mysqldump
-mysqldump -u<user> -p<password> -h<host> <database> <table> > <output.sql>
+mysqldump -u<user> -p<password> -h<host> <database> <table> > output.sql
 
 # Import just a single table with mysql (same as with a full db dump, no need for table specification)
-mysql -u<user> -p<password>  -h<host> <database> < <input.sql>
+mysql -u<user> -p<password>  -h<host> <database> < input.sql
 
 # Create a new mysql user
 CREATE USER '<newuser>'@'<localhost>' IDENTIFIED BY '<password>';

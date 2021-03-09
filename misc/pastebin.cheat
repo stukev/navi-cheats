@@ -1,4 +1,4 @@
 % pastebin
 
 # Send a text file to curl pastebin
-cat <file.txt> | curl -F 'clbin=<-' https://clbin.com
+cat <file> | curl -F 'clbin=<-' https://clbin.com

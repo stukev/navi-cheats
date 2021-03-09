@@ -1,7 +1,7 @@
 % docker, backup, sql
 
 # Backup a MySQL Database from Docker container to local file
-docker exec <CONTAINER> /usr/bin/mysqldump -u <user> --password=<password> <DATABASE> > <file.sql>
+docker exec <CONTAINER> /usr/bin/mysqldump -u <user> --password=<password> <DATABASE> > file.sql
 
-# Restore a MySQL Database in Docker container from local file
-cat <file.sql> | docker exec -i <CONTAINER> /usr/bin/mysql -u <user> --password=<password> <DATABASE>
+# Restore/import a MySQL Database in Docker container from local file
+cat file.sql | docker exec -i <CONTAINER> /usr/bin/mysql -u <user> --password=<password> <DATABASE>

@@ -1,10 +1,10 @@
 % file transfer, upload, download, rsync
 
 # Send file to temporary file hoster
-curl --upload-file <file.txt> https://transfer.sh/
+curl --upload-file file.txt https://transfer.sh/
 
 # Download a list of urls in a text file
-wget -i <file.txt>
+wget -i file.txt
 
 # Copy a directory from source to target
 rsync -hiva <SOURCE> <TARGET>
@@ -16,7 +16,7 @@ rsync -avnc <SOURCE> <TARGET>
 wget -A <pdf> -r -m -p -E -k -K --header="User-Agent: Mozilla/5.0 (Windows NT 6.0) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.97 Safari/537.11" --random-wait -np -e robots=off <http://site.com/>
 
 # Copy a public ssh key to a remote server so we can connect
-ssh-copy-id -i <~/.ssh/key.pub> <user@server.com>
+ssh-copy-id -i <keyfile> <user@server.com>
 
 # Send file to server via scp
 scp <index.html> <server>:</var/www/webroot>
