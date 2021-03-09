@@ -1,0 +1,7 @@
+% snap, permissions
+
+# Give a snap program access to mounted folders
+sudo snap connect <name>:removable-media
+
+# Allow a snap application to open files (fixes "Allow opening file" message)
+sudo snap connect <name>:home

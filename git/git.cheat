@@ -1,0 +1,37 @@
+% git, history, fetch, rename, delete
+
+# Show all git commits as one line including author
+git log --pretty=format:"%h%x09%an%x09%ad%x09%s"
+
+# Show all commits NOT by certain author
+git log --perl-regexp --author='^((?!<Author>).*)$'
+
+# Fetch all remote branches to local    
+git branch -r | grep -v '\->' | while read remote; do git branch --track "${remote#origin/}" "$remote"; done
+
+# Rename current local git branch
+git branch -m <new-name>
+
+# Push newly renamed git branch to remote (renames on remote too)
+git push origin :<old-name> <new-name>
+
+# Delete local branch and fetch it freshly from remote
+git branch -D <branch>;git checkout <branch>
+
+# Remove a commit that wasn't pushed yet without deleting your changes
+git reset --soft HEAD~1
+
+# Remove a commit that wasn't pushed yet, destroy changes & revert to latest commit
+git reset --hard HEAD~1
+
+# Show current git username
+git config user.name
+
+# Show current git email
+git config user.email
+
+# Set git username
+git config user.name "<Name>"
+
+# Set git email
+git config user.email <email@email.com>

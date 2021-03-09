@@ -1,0 +1,7 @@
+% docker
+
+# List all volumes of a docker container
+docker inspect -f '{{ .Mounts }}' <DOCKERID>
+
+# Open a shell in a docker container
+docker exec -it <name> /bin/bash

@@ -1,0 +1,22 @@
+% shell, bash, search
+
+# Search for file and display lines containing string (requires: locate)
+locate <file.xml> | xargs grep <password>
+
+# Find the 10 largest files in current folder
+find . -type f -printf '%s %p\n' | sort -nr | head -10
+
+# Find the 10 most recently modified files in current folder
+find $1 -type f -print0 | xargs -0 stat --format '%Y :%y %n' | sort -nr | cut -d: -f2- | head
+
+# Find strings in a binary file
+strings <file.pdf> | grep <string>
+
+# Grep search current dir for only specific file extensions
+grep -ril --include \*.<pdf> .
+
+# Show every line that doesn't contain a certain string
+awk '!/<String>/'
+
+# Find with multiple arguments
+find "$PWD" -name "<*.mkv>" -o -name "<*.mp4>"

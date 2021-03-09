@@ -1,0 +1,10 @@
+% text, modification
+
+# Delete every line from file that contains string
+sed -i '/<string>/d' <file.txt>
+
+# Delete every line from file that doesn't contain string
+sed -i '/<string>/!d' <file.txt>
+
+# Copy all lines not containing string to new file
+awk '!/<string>/' <input.txt> > <output.txt>

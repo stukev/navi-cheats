@@ -1,0 +1,16 @@
+% docker, start, stop, delete
+
+# Start all docker containers by string
+docker container start $(docker ps -a -q --filter="name=<NAME>")
+
+# Stop all docker containers by string
+docker container stop $(docker ps -a -q --filter="name=<NAME>")
+
+# Delete all docker containers by string
+docker rm $(docker ps -a -q --filter="name=<NAME>")
+
+# Stop all running Docker containers
+docker stop $(docker ps -a -q)
+
+# Delete all existing Docker containers
+docker rm $(docker ps -a -q)

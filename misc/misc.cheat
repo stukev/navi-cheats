@@ -1,0 +1,35 @@
+# Edit hosts file
+sudo nano /etc/hosts
+
+# Find out what ports are in use
+sudo lsof -i -P -n
+
+# Get total file size of directory
+du -sh PATH
+
+# Increase the priority of a process by name
+renice -n -5 -p $(pgrep ^<NAME>$)
+
+# Lower a processes priority by name
+renice -n 15 -p $(pgrep ^<NAME>$)
+
+# Send a system notification
+notify-send <text>
+
+# Find device name of connected scanner
+sane-find-scanner
+
+# Scan a picture at 1200 dpi as jpeg
+scanimage --device "<device>" --format=jpeg --output-file <output.jpg> --progress --resolution 1200
+
+# Create a symbolic link to a file
+ln -s <SOURCE> <TARGET>
+
+# Use backslashes in grep (double backslash for shell + double for grep)
+grep -r "Text before slash\\\\Text after slash"
+
+# Compress an entire folder as tar.gz
+tar -zcvf <archive-name>.tar.gz <directory>
+
+# Show who's using a file
+lsof <file>

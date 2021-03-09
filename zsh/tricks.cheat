@@ -1,0 +1,4 @@
+% zsh
+
+# Retype last command without argument in zsh
+!:0

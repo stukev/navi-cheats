@@ -1,0 +1,11 @@
+% ffmpeg
+
+# Convert mkv to mp4 with least modification to video data
+ffmpeg -i <file>.mkv -codec copy <file>.mp4
+
+# Batch convert mkv to mp4 with least modification, overwrite existing and ignore opus warning
+for i in *.mkv; do ffmpeg -i "$i" -y -codec copy -strict -2 "${i%.*}.mp4"; done
+
+# Create thumbnails from all mp4 files at 480p resolution
+for f in *.mp4; do ffmpeg -i "$f" -ss 00:00:03 -vframes 1 -s 480x320 "${f%.mp4}.jpg"; done
+

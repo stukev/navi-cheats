@@ -1,0 +1,5 @@
+# Download a video/stream from youtube or other sites (requires: youtube-dl)
+youtube-dl <url>
+
+# Turn a video/stream from youtube or other sites into an mp3 (requires: youtube-dl)
+youtube-dl -x --embed-thumbnail --audio-format mp3 <url>

@@ -1,0 +1,10 @@
+% gnome, process number
+
+# Find process number of a task via mouse click
+xprop | grep PID
+
+# Open the current terminal path in file explorer
+nautilus .
+
+# Softly restart gnome (these are hotkeys, not a command)
+alt + f2, then type r followed by enter

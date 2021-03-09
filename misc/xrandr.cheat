@@ -1,0 +1,5 @@
+% xrandr, screen resolution
+
+# Change screen resolution
+xrandr --output `xrandr | grep " connected"|cut -f1 -d" "` --mode <1920x1080>
+
