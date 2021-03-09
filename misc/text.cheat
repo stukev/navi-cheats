@@ -8,3 +8,6 @@ sed -i '/<string>/!d' <file.txt>
 
 # Copy all lines not containing string to new file
 awk '!/<string>/' <input.txt> > <output.txt>
+
+# Replace every string with string in file
+sed -i 's/<search string>/<replace string>/g' <file.txt>
