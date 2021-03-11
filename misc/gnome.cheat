@@ -6,5 +6,6 @@ xprop | grep PID
 # Open the current terminal path in file explorer
 nautilus .
 
-# Softly restart gnome (these are hotkeys, not a command)
-alt + f2, then type r followed by enter
+# Softly restart gnome (this simulates the same behaviour as alt + f2 -> r)
+gdbus call --session --dest org.gnome.Shell --object-path /org/gnome/Shell --method org.gnome.Shell.Eval 'Meta.restart(_("Restarting…"))'
+
