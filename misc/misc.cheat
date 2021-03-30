@@ -33,3 +33,9 @@ tar -zcvf <archive-name>.tar.gz <directory>
 
 # Show who's using a file
 lsof <file>
+
+# Create a new user and add them to sudoers
+useradd -m -d /home/<user>/ -s /bin/bash -G sudo <user>
+
+# Left click x times with x seconds pause (requires xdotool)
+for i in {1..<times>}; do xdotool click 1; sleep <seconds>; done

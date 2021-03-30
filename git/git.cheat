@@ -35,3 +35,6 @@ git config user.name "<Name>"
 
 # Set git email
 git config user.email <email@email.com>
+
+# Show what's changed in a file
+git diff <file>
