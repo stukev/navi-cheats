@@ -39,3 +39,6 @@ useradd -m -d /home/<user>/ -s /bin/bash -G sudo <user>
 
 # Left click x times with x seconds pause (requires xdotool)
 for i in {1..<times>}; do xdotool click 1; sleep <seconds>; done
+
+# Start a memory editor for process by name, useful for cheating (requires scanmem)
+sudo scanmem --pid=`pgrep <name>`
