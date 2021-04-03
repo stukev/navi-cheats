@@ -42,3 +42,6 @@ for i in {1..<times>}; do xdotool click 1; sleep <seconds>; done
 
 # Start a memory editor for process by name, useful for cheating (requires scanmem)
 sudo scanmem --pid=`pgrep <name>`
+
+# Add additional ssh keys to the agent
+ssh-add <file>
