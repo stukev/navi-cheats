@@ -43,5 +43,8 @@ for i in {1..<times>}; do xdotool click 1; sleep <seconds>; done
 # Start a memory editor for process by name, useful for cheating (requires scanmem)
 sudo scanmem --pid=`pgrep <name>`
 
+# Set scanmem to search for int32 addresses (requires scanmem)
+option scan_data_type int32
+
 # Add additional ssh keys to the agent
 ssh-add <file>
