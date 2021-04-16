@@ -46,5 +46,8 @@ sudo scanmem --pid=`pgrep <name>`
 # Set scanmem to search for int32 addresses (requires scanmem)
 option scan_data_type int32
 
-# Add additional ssh keys to the agent
+# Add additional ssh keys to the agent ssh local
 ssh-add <file>
+
+# Search for a term in all pdfs in current directory and below (requires pdfgrep)
+pdfgrep -Ri "<term>" .
