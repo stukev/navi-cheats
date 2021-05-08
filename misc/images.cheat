@@ -1,0 +1,2 @@
+# Remove all but white color from image (requires imagemagick)
+convert <image> -matte ( +clone  -fuzz 5% -transparent white ) -compose DstOut -composite <outputimage>

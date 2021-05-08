@@ -11,3 +11,6 @@ awk '!/<string>/' input.txt > output.txt
 
 # Replace every string with string in file
 sed -i 's/<search string>/<replace string>/g' file.txt
+
+# OCR an image and output text to console (requires tesseract)
+tesseract <image> stdout
