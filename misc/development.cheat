@@ -1,0 +1,2 @@
+# Run google chrome with remote debugging activates
+google-chrome --remote-debugging-port=9229
