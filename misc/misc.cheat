@@ -51,3 +51,6 @@ ssh-add <file>
 
 # Search for a term in all pdfs in current directory and below (requires pdfgrep)
 pdfgrep -Ri "<term>" .
+
+# Make a list of installed software
+comm -23 <(apt-mark showmanual | sort -u) <(gzip -dc /var/log/installer/initial-status.gz | sed -n 's/^Package: //p' | sort -u)

@@ -1,2 +1,5 @@
 # Run google chrome with remote debugging activates
 google-chrome --remote-debugging-port=9229
+
+# Temporarily increase php memory limit
+php -d memory_limit=512M /usr/local/bin/composer update
