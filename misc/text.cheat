@@ -17,3 +17,6 @@ tesseract <image> stdout
 
 # Remove everything to the left of string in file (all strings must be the same)
 sed -i 's/^[^<string>]*<string>/<string>/' file
+
+# Replace string with new line in file
+sed -i 's/<string>/\n/g' test.txt
