@@ -9,3 +9,5 @@ for i in *.mkv; do ffmpeg -i "$i" -y -codec copy -strict -2 "${i%.*}.mp4"; done
 # Create thumbnails from all mp4 files at 480p resolution
 for f in *.mp4; do ffmpeg -i "$f" -ss 00:00:03 -vframes 1 -s 480x320 "${f%.mp4}.jpg"; done
 
+# Merge audio and video into one file without changing encodings
+ffmpeg -i video.mp4 -i audio.m4a -c:v copy -c:a copy output.mp4

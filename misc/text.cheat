@@ -14,3 +14,6 @@ sed -i 's/<search string>/<replace string>/g' file.txt
 
 # OCR an image and output text to console (requires tesseract)
 tesseract <image> stdout
+
+# Remove everything to the left of string in file (all strings must be the same)
+sed -i 's/^[^<string>]*<string>/<string>/' file
