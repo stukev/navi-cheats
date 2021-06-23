@@ -16,7 +16,10 @@ sed -i 's/<search string>/<replace string>/g' file.txt
 tesseract <image> stdout
 
 # Remove everything to the left of string in file (all strings must be the same)
-sed -i 's/^[^<string>]*<string>/<string>/' file
+sed -i 's/^[^<string>]*<string>/<string>/' test.txt
 
 # Replace string with new line in file
 sed -i 's/<string>/\n/g' test.txt
+
+# Remove everything to the right of string in file
+sed -i 's/<string>//' test.txt
