@@ -1,0 +1,2 @@
+# Search apt for files that you need, returns packages
+apt search Xlib.h

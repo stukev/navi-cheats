@@ -18,3 +18,6 @@ GRANT ALL PRIVILEGES ON * . * TO '<newuser>'@'<localhost>';
 
 # Dump a remote database to a local file via ssh
 ssh <server> mysqldump -h <host> -u <user> -p<password> --opt <database> > dump.sql
+
+# Dump an sql database to gzipped file
+mysqldump -h<host> -u<user> -p<pass> --opt <database> | gzip -9 > dump.sql.gz

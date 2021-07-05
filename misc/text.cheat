@@ -22,4 +22,4 @@ sed -i 's/^[^<string>]*<string>/<string>/' test.txt
 sed -i 's/<string>/\n/g' test.txt
 
 # Remove everything to the right of string in file
-sed -i 's/<string>//' test.txt
+sed -i 's/<string>.*//' test.txt

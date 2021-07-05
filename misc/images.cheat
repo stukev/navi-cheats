@@ -1,2 +1,20 @@
 # Remove all but white color from image (requires imagemagick)
-convert <image> -matte ( +clone  -fuzz 5% -transparent white ) -compose DstOut -composite <outputimage>
+convert /tmp/step1.png -fill black -fuzz 30% +opaque "#FFFFFF" /tmp/step2.png
+
+# Invert the colors of an image
+convert /tmp/step2.png -negate /tmp/step3.png
+
+# Get the pixel coordinates under the mouse
+xdotool getmouselocation --shell
+
+# Use Tesseract OCR with a whitelist of characters
+tesseract input.jpg stdout -c tessedit_char_whitelist=0123456789ABC
+
+# Only get the R value of the RGB of picture with imagemagick
+convert /tmp/rare.png -format '%[fx:int(255*r+.5)]' info:-
+
+#Screenshot only a specific part of the screen
+scrot --autoselect 3497,155,1,1 --quality 100 --overwrite /tmp/legend.png
+
+# Use Tesseract OCR for a single character (psm)
+tesseract /tmp/output.jpg stdout --psm 10
