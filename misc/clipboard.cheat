@@ -3,3 +3,8 @@
 # Put a file's contents into your clipboard
 cat <file> | xclip -sel clip
 
+# Put clipboard contents into a file (hopefully it's text!)
+`xsel -b >> some.txt`
+
+# Add a suffix to all lines in a text file.
+sed -i -e 's/$/suffix/' file.txt

@@ -18,3 +18,12 @@ scrot --autoselect 3497,155,1,1 --quality 100 --overwrite /tmp/legend.png
 
 # Use Tesseract OCR for a single character (psm)
 tesseract /tmp/output.jpg stdout --psm 10
+
+# Display image in command line (requires caca-utils) (opens a new window)
+cacaview <image.jpg>
+
+# Display image in command line directly (requires viu)
+viu <image.jpg>
+
+# Render a video in command line
+mplayer -vo caca /PATH/TO/video.mpg

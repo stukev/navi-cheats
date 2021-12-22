@@ -54,3 +54,18 @@ pdfgrep -Ri "<term>" .
 
 # Make a list of installed software
 comm -23 <(apt-mark showmanual | sort -u) <(gzip -dc /var/log/installer/initial-status.gz | sed -n 's/^Package: //p' | sort -u)
+
+# Find what process uses what port (needs sudo for PID)
+sudo netstat -nlp | grep 8080
+
+# Create an entire folder tree with subdirectories
+mkdir -p folder/sub/sub/folder
+
+# Find 20 largest folders in destination
+du -hs * | sort -rh | head -5
+
+# Recursively delete all files older than 20 days
+find /path/to/directory/ -mindepth 1 -mtime +20 -delete
+
+# Open a new text file with current timestamp
+nano `date +%Y%m%d%H%M%S`.txt

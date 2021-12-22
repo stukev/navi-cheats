@@ -3,3 +3,6 @@ php bin/magento module:status | awk '!/Magento_/'
 
 # Show all running magento processes
 ps aux | grep bin/magento
+
+# Find which files are causing class errors
+find . -type f -iname '*.php' -print0 | xargs -0 grep -nw -e 'Prince\\Productattach\\Model\\Productattach

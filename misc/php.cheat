@@ -1,0 +1,11 @@
+# Show phpinfo on command line
+php -i
+
+# Check if certain php extension is present
+php -i | grep sodium
+
+# Check memory limit 
+php -i | grep memory
+
+# Run a script with higher/lower memory limit than set in php.ini
+php -d memory_limit=3G index.php

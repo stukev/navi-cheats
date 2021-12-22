@@ -1,0 +1,2 @@
+# Find bootstrap version in dev console
+$.fn.tooltip.Constructor.VERSION

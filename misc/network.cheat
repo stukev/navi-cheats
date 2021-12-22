@@ -1,0 +1,2 @@
+# Scan all ports of a target and output any data received. Useful to check if ports are doing anything.
+nmap -sV --script=banner <target>
