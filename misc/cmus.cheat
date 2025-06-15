@@ -1,0 +1,93 @@
+# Play/Pause
+c
+
+# Stop playback
+v
+
+# Next track
+b
+
+# Previous track
+z
+
+# Seek forward (5 seconds)
+→
+
+# Seek backward (5 seconds)
+←
+
+# Seek forward (10 seconds)
+Shift+→
+
+# Seek backward (10 seconds)
+Shift+←
+
+# Toggle repeat mode
+:set repeat=true/false
+
+# Toggle shuffle mode
+:set shuffle=true/false
+
+# Toggle views (between Library, Playlist, etc.)
+Tab
+
+# Switch to Library view
+1
+
+# Switch to Playlist view
+2
+
+# Switch to File Browser view
+5
+
+# Switch to Queue view
+6
+
+# Move up
+k
+
+# Move down
+j
+
+# Page up
+Ctrl+u
+
+# Page down
+Ctrl+d
+
+# Scroll left/right in horizontal views
+h
+l
+
+# Search forward
+/
+
+# Search backward
+?
+
+# Next search result
+n
+
+# Previous search result
+N
+
+# Add track to playlist
+a
+
+# Remove track from playlist
+D
+
+# Save playlist
+:save -p myplaylist
+
+# Load playlist
+:load myplaylist
+
+# Update music library
+:update-cache
+
+# Quit cmus
+q
+
+# Force quit cmus
+Q

@@ -29,3 +29,6 @@ echo "export EDITOR=nano" > ~/.bashrc
 
 # Show only unique lines in a file
 sort file.txt | uniq
+
+# Find files and open all results in nano
+find . -name "device.json" -exec nano {} +

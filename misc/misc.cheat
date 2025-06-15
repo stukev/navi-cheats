@@ -69,3 +69,46 @@ find /path/to/directory/ -mindepth 1 -mtime +20 -delete
 
 # Open a new text file with current timestamp
 nano `date +%Y%m%d%H%M%S`.txt
+
+# Find out what is running on a specific port
+sudo lsof -i :5432
+
+# Restart pulseaudio (sometimes fixes audio problems)
+pulseaudio -k
+
+# Remove music from video/audio
+https://vocalremover.org/
+
+# Recursively search through pdf files and find alls CAPSLOCK words with 2-8 chars (useful to make a glossary)
+pdfgrep -r -P '\b[A-Z]{2,8}\b'
+
+# Merge multiple PDFs into one
+pdfunite in-1.pdf in-2.pdf in-n.pdf out.pdf
+
+# Test spamassassin by subscribing testaccount to spam newsletters (discard email afterwards)
+https://mailbait.info/
+
+# Read twitter posts/pages without registering
+https://nitter.net/
+
+# Find duplicate files (requires fdupes)
+fdupes -r .
+
+# Find duplicate files and delete interactively (requires fdupes)
+fdupes -rd .
+
+# Activate a python venv
+source venv/bin/activate
+
+# Mirror an entire website offline
+wget --mirror --convert-links --html-extension -p http://www.example.com/
+
+# Turn multiple jpgs into one pdf (requires imagemagick)
+mogrify -format pdf /home/ubuntu/*.jpg
+
+# Merge multiple pdfs into one pdf (requires pdfunite)
+pdfunite Seite_1.pdf Seite_2.pdf out.pdf
+
+# Grep all files smaller than 50kb
+find . -maxdepth 1 -type f -size -50k -exec grep "TODO" {} +
+

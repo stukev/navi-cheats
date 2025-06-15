@@ -13,4 +13,7 @@ for f in *.mp4; do ffmpeg -i "$f" -ss 00:00:03 -vframes 1 -s 480x320 "${f%.mp4}.
 ffmpeg -i video.mp4 -i audio.m4a -c:v copy -c:a copy output.mp4
 
 # Convert mp4 into webm video (massive filesize savings)
-ffmpeg -i hes_right.mp4 hes_right.webm
+ffmpeg -i input.mp4 output.webm
+
+# Convert webm into mp4 video
+ffmpeg -i input.webm output.mp4

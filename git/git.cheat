@@ -38,3 +38,6 @@ git config user.email <email@email.com>
 
 # Show what's changed in a file
 git diff <file>
+
+# Make your ssh config use bitbucket key
+cat kevin_xps.pub >> ~/.ssh/authorized_keys;cat "Host bitbucket.org\r\n\tIdentityFile ~/.ssh/kevin_xps" ~/.ssh/config
